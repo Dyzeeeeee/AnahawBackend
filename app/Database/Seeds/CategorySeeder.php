@@ -18,14 +18,24 @@ class CategorySeeder extends Seeder
             ['name' => 'Noodles'],
             ['name' => 'Shrimp Squid'],
             ['name' => 'Sizzling Plates'],
-            ['name' => 'Pork'],
-            ['name' => 'Pork'],// You can add as many categories as needed
-            ['name' => 'Chicken'],
             ['name' => 'Appetizers'],
+            ['name' => 'Snacks'],
             ['name' => 'Breakfast'],
             ['name' => 'Sandwiches'],
             ['name' => 'Solo Plated'],
             ['name' => 'Rice'],
+            ['name' => 'Soups'],
+            ['name' => 'Vegetables'],
+            ['name' => 'Biscuits'],
+            ['name' => 'Hot Drinks'],
+            ['name' => 'Snacks'],
+            ['name' => 'Shake'],
+            ['name' => 'Medicines'],
+            ['name' => 'Groceries'],
+            ['name' => 'Medicines'],
+            ['name' => 'Liquors'],
+            ['name' => ''],
+            ['name' => ''],
         ];
 
         // Simple Query

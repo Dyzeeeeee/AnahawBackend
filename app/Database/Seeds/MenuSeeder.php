@@ -10,7 +10,7 @@ class MenuSeeder extends Seeder
     {
         $data = [
 
-            // colddrinks
+            // colddrinks 1
             [
                 'name' => 'Strawberry Shake',
                 'description' => '',
@@ -51,7 +51,7 @@ class MenuSeeder extends Seeder
                 'name' => 'Iced Coffee Float',
                 'description' => '',
                 'image' => 'Ice coffee float.jfif',
-                'price' => 125.00,
+                'price' => 130.00,
                 'category_id' => 1, // Assuming there is a category with ID 1
                 'orders' => 0,
                 'archived_at' => null
@@ -78,7 +78,7 @@ class MenuSeeder extends Seeder
                 'name' => 'Softdrinks',
                 'description' => '08oz',
                 'image' => 'soft drinks 8oz.jfif',
-                'price' => 18.00,
+                'price' => 25.00,
                 'category_id' => 1, // Assuming there is a category with ID 1
                 'orders' => 0,
                 'archived_at' => null
@@ -137,12 +137,12 @@ class MenuSeeder extends Seeder
                 'orders' => 0,
                 'archived_at' => null
             ],
-            // Alcoholic Drinks
+            // Alcoholic Drinks 2
             [
                 'name' => 'Carlo Rossi wine',
                 'description' => '',
                 'image' => 'Carlorossi wine.jpg',
-                'price' => 600.00,
+                'price' => 650.00,
                 'category_id' => 2, // Assuming there is a category with ID 1
                 'orders' => 0,
                 'archived_at' => null
@@ -151,7 +151,7 @@ class MenuSeeder extends Seeder
                 'name' => 'San Mig Flavored',
                 'description' => '',
                 'image' => 'san-miguel-flavored-beer.jpg',
-                'price' => 70.00,
+                'price' => 75.00,
                 'category_id' => 2, // Assuming there is a category with ID 1
                 'orders' => 0,
                 'archived_at' => null
@@ -160,7 +160,7 @@ class MenuSeeder extends Seeder
                 'name' => 'San Mig Light',
                 'description' => '',
                 'image' => 'san mig light.png',
-                'price' => 70.00,
+                'price' => 75.00,
                 'category_id' => 2, // Assuming there is a category with ID 1
                 'orders' => 0,
                 'archived_at' => null
@@ -169,7 +169,43 @@ class MenuSeeder extends Seeder
                 'name' => 'San Mig Pale Pilsen',
                 'description' => '',
                 'image' => 'san mig pale pilsen.png',
-                'price' => 70.00,
+                'price' => 75.00,
+                'category_id' => 2, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Mule',
+                'description' => '',
+                'image' => '',
+                'price' => 75.00,
+                'category_id' => 2, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'SML can',
+                'description' => '',
+                'image' => '',
+                'price' => 75.00,
+                'category_id' => 2, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Tanduay ice',
+                'description' => '',
+                'image' => '',
+                'price' => 75.00,
+                'category_id' => 2, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Beer na Beer',
+                'description' => '',
+                'image' => '',
+                'price' => 75.00,
                 'category_id' => 2, // Assuming there is a category with ID 1
                 'orders' => 0,
                 'archived_at' => null
@@ -178,7 +214,7 @@ class MenuSeeder extends Seeder
                 'name' => 'Red Horse',
                 'description' => '330ml',
                 'image' => 'red-horse-bottle-330ml_2.jpg',
-                'price' => 70.00,
+                'price' => 75.00,
                 'category_id' => 2, // Assuming there is a category with ID 1
                 'orders' => 0,
                 'archived_at' => null
@@ -187,7 +223,7 @@ class MenuSeeder extends Seeder
                 'name' => 'Emperador Light',
                 'description' => '750ml',
                 'image' => 'emperador light 750.jpg',
-                'price' => 250.00,
+                'price' => 350.00,
                 'category_id' => 2, // Assuming there is a category with ID 1
                 'orders' => 0,
                 'archived_at' => null
@@ -196,7 +232,7 @@ class MenuSeeder extends Seeder
                 'name' => 'GSM Blue',
                 'description' => '700ml',
                 'image' => 'GSM blue 700.jfif',
-                'price' => 250.00,
+                'price' => 350.00,
                 'category_id' => 2, // Assuming there is a category with ID 1
                 'orders' => 0,
                 'archived_at' => null
@@ -205,7 +241,7 @@ class MenuSeeder extends Seeder
                 'name' => 'Red Wine',
                 'description' => '',
                 'image' => 'Red wine.jpg',
-                'price' => 500.00,
+                'price' => 550.00,
                 'category_id' => 2, // Assuming there is a category with ID 1
                 'orders' => 0,
                 'archived_at' => null
@@ -214,7 +250,7 @@ class MenuSeeder extends Seeder
                 'name' => 'El Hombre Tequila',
                 'description' => '',
                 'image' => 'el hombre.jpg',
-                'price' => 600.00,
+                'price' => 700.00,
                 'category_id' => 2, // Assuming there is a category with ID 1
                 'orders' => 0,
                 'archived_at' => null
@@ -223,7 +259,7 @@ class MenuSeeder extends Seeder
                 'name' => 'Alfonso',
                 'description' => '1 liter',
                 'image' => 'Alfonso 1 liter.jpg',
-                'price' => 650.00,
+                'price' => 700.00,
                 'category_id' => 2, // Assuming there is a category with ID 1
                 'orders' => 0,
                 'archived_at' => null
@@ -232,7 +268,7 @@ class MenuSeeder extends Seeder
                 'name' => 'Fundador',
                 'description' => '1 liter',
                 'image' => 'Fundador.avif',
-                'price' => 900.00,
+                'price' => 1050.00,
                 'category_id' => 2, // Assuming there is a category with ID 1
                 'orders' => 0,
                 'archived_at' => null
@@ -255,7 +291,7 @@ class MenuSeeder extends Seeder
                 'orders' => 0,
                 'archived_at' => null
             ],
-            // Mixed Cocktails
+            // Mixed Cocktails 3
             [
                 'name' => 'Tequila Sunrise',
                 'description' => '',
@@ -323,7 +359,7 @@ class MenuSeeder extends Seeder
                 'name' => 'Mindoro Sling Pitcher',
                 'description' => '',
                 'image' => 'mindoro-sling-pitcher.png',
-                'price' => 550.00,
+                'price' => 600.00,
                 'category_id' => 3, // Assuming there is a category with ID 1
                 'orders' => 0,
                 'archived_at' => null
@@ -374,16 +410,8 @@ class MenuSeeder extends Seeder
                 'archived_at' => null
             ],
 
-            // Hot Drinks
-            [
-                'name' => 'Brewed Coffee',
-                'description' => '',
-                'image' => 'Brewed coffee.jpg',
-                'price' => 60.00,
-                'category_id' => 4, // Assuming there is a category with ID 1
-                'orders' => 0,
-                'archived_at' => null
-            ],
+            // Hot Drinks 4
+
             [
                 'name' => 'Coffee',
                 'description' => '',
@@ -420,46 +448,90 @@ class MenuSeeder extends Seeder
                 'orders' => 0,
                 'archived_at' => null
             ],
+            [
+                'name' => 'Birch Tree',
+                'description' => '',
+                'image' => '',
+                'price' => 25.00,
+                'category_id' => 4, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Brewed Coffee',
+                'description' => '',
+                'image' => '',
+                'price' => 60.00,
+                'category_id' => 4, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Coffee Mate',
+                'description' => '',
+                'image' => '',
+                'price' => 5.00,
+                'category_id' => 4, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Coffee Stick',
+                'description' => '',
+                'image' => '',
+                'price' => 25.00,
+                'category_id' => 4, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Kopiko',
+                'description' => '',
+                'image' => '',
+                'price' => 25.00,
+                'category_id' => 4, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Nescafe 3in1',
+                'description' => '',
+                'image' => '',
+                'price' => 25.00,
+                'category_id' => 4, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
 
-            // Boodle Bundles
+            // Boodle Bundles 5
             [
                 'name' => 'Package 1 (4-5 pax)',
-                'description' => 'Inihaw na Tilapia w/ sauce, halabos na hipon, inihaw na liempo, inihaw na talong, salted egg, steamed okra w/ bagoong, ensaladang mangga, and steamed rice',
+                'description' => "Inihaw na Tilapia w/ sauce,<br>halabos na hipon,<br>inihaw na liempo,<br>inihaw na talong,<br>salted egg,<br>steamed okra w/ bagoong,<br>ensaladang mangga,<br>and steamed rice",
                 'image' => 'boodle1.png',
-                'price' => 1665.00,
+                'price' => 1755.00,
                 'category_id' => 5, // Assuming there is a category with ID 1
                 'orders' => 0,
                 'archived_at' => null
             ],
             [
                 'name' => 'Package 2 (4-5 pax)',
-                'description' => 'Chicken bbq, crablets, inihaw na pusit, inihaw na talong, inihaw na bangus, halabos, na hipon, ensaladang labanos, and steamed rice',
+                'description' => 'Chicken bbq, crablets, inihaw na pusit,<br> inihaw na talong,<br> inihaw na bangus,<br> halabos, na hipon,<br> ensaladang labanos,<br> and steamed rice',
                 'image' => 'boodle2.png',
-                'price' => 1990.00,
-                'category_id' => 5, // Assuming there is a category with ID 1
-                'orders' => 0,
-                'archived_at' => null
-            ],
-            [
-                'name' => 'Package 3 (4-5 pax)',
-                'description' => 'Vegetable tempura, 10pcs pork bbq, buffalo wings, ensaladang ampalaya, calamares fritos, and steamed rice',
-                'image' => 'boodle3.png',
                 'price' => 2010.00,
                 'category_id' => 5, // Assuming there is a category with ID 1
                 'orders' => 0,
                 'archived_at' => null
             ],
             [
-                'name' => 'Seafood Bundle (3-4 pax)',
-                'description' => 'w/ 3 rice and pineapple juice',
-                'image' => '',
-                'price' => 2375.00,
+                'name' => 'Package 3 (4-5 pax)',
+                'description' => 'Vegetable tempura,<br> 10pcs pork bbq,<br> buffalo wings,<br> ensaladang ampalaya,<br> calamares fritos,<br> and steamed rice',
+                'image' => 'boodle3.png',
+                'price' => 2040.00,
                 'category_id' => 5, // Assuming there is a category with ID 1
                 'orders' => 0,
                 'archived_at' => null
             ],
-
-            // Seafoods
+            // Seafoods 6
             [
                 'name' => 'Sinigang na ulo ng Salmon',
                 'description' => 'Salmon head in sinigang soup',
@@ -515,8 +587,17 @@ class MenuSeeder extends Seeder
                 'archived_at' => null
             ],
             [
-                'name' => 'Fish Fillet with',
-                'description' => 'Sweet & sour sauce or White sauce',
+                'name' => 'Grilled Tilapia/Bangus',
+                'description' => 'Tilapia or Bangis fish grilled and served w/ soy sauce dip',
+                'image' => 'Grilled tilapia bangus.jpg',
+                'price' => 245.00,
+                'category_id' => 6, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Fish Fillet',
+                'description' => 'w/ Sweet & sour sauce or White sauce',
                 'image' => 'Fish fillet.jpg',
                 'price' => 295.00,
                 'category_id' => 6, // Assuming there is a category with ID 1
@@ -550,8 +631,17 @@ class MenuSeeder extends Seeder
                 'orders' => 0,
                 'archived_at' => null
             ],
+            [
+                'name' => 'Grilled Tuna Belly',
+                'description' => 'Per gram',
+                'image' => '',
+                'price' => 1.2,
+                'category_id' => 6, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
 
-            // Noodles
+            // Noodles 7
             [
                 'name' => 'Pancit Sotanghon',
                 'description' => '',
@@ -607,7 +697,90 @@ class MenuSeeder extends Seeder
                 'archived_at' => null
             ],
 
-            // Sizzling plates
+            //Shrimp & Squid 8
+            [
+                'name' => 'Inihaw na Pusit (per gram)',
+                'description' => 'Grilled whole squid bashed in savory sauce',
+                'image' => '',
+                'price' => 1.60.00,      
+                'category_id' => 8, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Calamares Fritos',
+                'description' => 'Fried Squid rings in Japanese breadcrumbs',
+                'image' => '',
+                'price' => 290.00,      
+                'category_id' => 8, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Shrimp Halabos',
+                'description' => 'Shrimps steamed with it\'s own juice & cooked with little oil',
+                'image' => '',
+                'price' => 380.00,      
+                'category_id' => 8, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Sinigang na Hipon',
+                'description' => 'Sour soup with shrimp and vegetables',
+                'image' => '',
+                'price' => 425.00,      
+                'category_id' => 8, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Camaron Rebosado',
+                'description' => 'deep fried batter coated shrimp without the shells',
+                'image' => '',
+                'price' => 380.00,      
+                'category_id' => 8, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Sauteed Shrimp with Chinese Mushroom',
+                'description' => '',
+                'image' => '',
+                'price' => 410.00,      
+                'category_id' => 8, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Shrimp Tempura',
+                'description' => 'shrimp in tempura batter deep fried served with tempura sauce',
+                'image' => '',
+                'price' => 380.00,      
+                'category_id' => 8, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Mixed Tempura',
+                'description' => 'shrimp and vegetables in tempura batter deep fried served with tempura sauce and sour sauce',
+                'image' => '',
+                'price' => 650.00,      
+                'category_id' => 8, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Baked Scallop',
+                'description' => '',
+                'image' => '',
+                'price' => 235.00,      
+                'category_id' => 8, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+         
+            // Sizzling plates 9
             [
                 'name' => 'Sizzling Mushroom',
                 'description' => 'With Tofu',
@@ -623,6 +796,15 @@ class MenuSeeder extends Seeder
                 'description' => '',
                 'image' => 'Sizzling beef bulalo.jpg',
                 'price' => 750,
+                'category_id' => 9, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Sizzling Gambas',
+                'description' => 'Shrimp served in sizzling plate with red sweet spicy sauce',
+                'image' => 'Sizzling sisig squid.jpg',
+                'price' => 385.00,
                 'category_id' => 9, // Assuming there is a category with ID 1
                 'orders' => 0,
                 'archived_at' => null
@@ -721,7 +903,7 @@ class MenuSeeder extends Seeder
                 'name' => 'Sizzling Pork Sisig (Regular)',
                 'description' => 'Minced crispy pork mask with chili, onion & liver in sizzling plate',
                 'image' => 'Sizzling Pork Sisig.avif',
-                'price' => 225.00,
+                'price' => 250.00,
                 'category_id' => 9, // Assuming there is a category with ID 1
                 'orders' => 0,
                 'archived_at' => null
@@ -730,7 +912,7 @@ class MenuSeeder extends Seeder
                 'name' => 'Sizzling Pork Sisig (Special)',
                 'description' => 'Minced crispy pork mask with chili, onion & liver in sizzling plate (with egg)',
                 'image' => 'Sizzling Pork Sisig.avif',
-                'price' => 245.00,
+                'price' => 265.00,
                 'category_id' => 9, // Assuming there is a category with ID 1
                 'orders' => 0,
                 'archived_at' => null
@@ -748,7 +930,7 @@ class MenuSeeder extends Seeder
                 'name' => 'Sizzling Hotdog',
                 'description' => 'Sliced hotdog coered with spicy red sauce and mixed vegetable on the side',
                 'image' => 'Sizzling-Hotdog1.jpg',
-                'price' => 195.00,
+                'price' => 215.00,
                 'category_id' => 9, // Assuming there is a category with ID 1
                 'orders' => 0,
                 'archived_at' => null
@@ -757,7 +939,7 @@ class MenuSeeder extends Seeder
                 'name' => 'Sizzling Corn with Cheese',
                 'description' => 'Sauteed whole corn kernels topped with grated cheese',
                 'image' => 'sizzling corn with cheese.jpg',
-                'price' => 195.00,
+                'price' => 215.00,
                 'category_id' => 9, // Assuming there is a category with ID 1
                 'orders' => 0,
                 'archived_at' => null
@@ -766,11 +948,1579 @@ class MenuSeeder extends Seeder
                 'name' => 'Sizzling Mushroom',
                 'description' => 'Sauteed button mushroom topped with garlic bits',
                 'image' => 'Sizzling mushroom only.jfif',
-                'price' => 195.00,
+                'price' => 215.00,
                 'category_id' => 9, // Assuming there is a category with ID 1
                 'orders' => 0,
                 'archived_at' => null
             ],
+            //Appetizers 10
+            [
+                'name' => 'Crispy Crablets',
+                'description' => 'Season small crabs, dreged in cornstarch and deep-fried until crispy Served with garlic vinegar',
+                'image' => 'crispy crablets.jpg',
+                'price' => 350.00,
+                'category_id' => 10, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Sili Rolls',
+                'description' => 'Deep fried stuffed finger chilles wrapped in egg roll wrapp',
+                'image' => 'sili rolls.jpg',
+                'price' => 240.00,
+                'category_id' => 10, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Steamed Pork Siomai',
+                'description' => '8pcs steamed pork',
+                'image' => 'steamed pork siomai.jpg',
+                'price' => 120.00,
+                'category_id' => 10, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Fried Pork Siomai',
+                'description' => '8pcs deep fried pork siomai',
+                'image' => 'fried pork siomai.jpg',
+                'price' => 120.00,
+                'category_id' => 10, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Sizzling Siomai',
+                'description' => '12 pcs pork siomai steam and served in a sizzling platter with hot gravy sauce',
+                'image' => 'sizzling siomai.jpg',
+                'price' => 225.00,
+                'category_id' => 10, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Nachos',
+                'description' => 'Tortilla chips covered with ground beef, tomatoes, onion and melted cheese',
+                'image' => 'nachos.jpg',
+                'price' => 215.00,
+                'category_id' => 10, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Fish \'N Chips',
+                'description' => 'Fried in batter served with fried',
+                'image' => 'fish n chips.jpg',
+                'price' => 295.00,
+                'category_id' => 10, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Onion Rings',
+                'description' => 'Sliced onion that are dipped in a batter and deep fried intil crispy',
+                'image' => 'onion rings.jpg',
+                'price' => 240.00,
+                'category_id' => 10, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Chicken sa Wrap',
+                'description' => 'Sliced onion that are dipped in batter',
+                'image' => 'chicken sa wrap.jpg',
+                'price' => 205.00,
+                'category_id' => 10, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            //Snacks 11
+            [
+                'name' => 'Halo-Halo',
+                'description' => 'Mix of Pinoy sweets & fruit with crushed ice & evaporated milk',
+                'image' => 'halo halo.jpg',
+                'price' => 120.00,
+                'category_id' => 11, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Mais Con Yelo',
+                'description' => 'Sweet corn with crushed ice & evaporated milk',
+                'image' => 'mais con yelo.jpg',
+                'price' => 75.00,
+                'category_id' => 11, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'French Fries',
+                'description' => 'Freshly cut potatoes deep fried served with catsup',
+                'image' => 'french fries.jpg',
+                'price' => 210.00,
+                'category_id' => 11, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Country Fries',
+                'description' => 'Fried coated potato wedges served with mayo garlic',
+                'image' => 'country fries.jpg',
+                'price' => 230.00,
+                'category_id' => 11, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Squid Balls',
+                'description' => '20 pcs squidballs served with sweet chili sauce',
+                'image' => 'squid balls.jpg',
+                'price' => 150.00,
+                'category_id' => 11, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Cheese sticks',
+                'description' => 'Thinly cut cheese wrapped in eggrolll wrapper',
+                'image' => 'cheese sticks.jpg',
+                'price' => 160.00,
+                'category_id' => 11, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            //Breakfast 12
+            [
+                'name' => 'Pinoy Silog Breakfast',
+                'description' => 'Daing na bangus / Tocino / Tapa / Biya / Longganisa / Dilis (Served with fried rice & scrambled, sunnyside-up or boiled egg)',
+                'image' => 'pinoy silog breakfast.jpeg',
+                'price' => 135.00,
+                'category_id' => 12, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'American Breakfast',
+                'description' => 'Hotdog / Bacon / Ham (Served with toasted bread & scrambled, sunnyside-up or boiled egg)',
+                'image' => 'american breakfast.jpg',
+                'price' => 135.00,
+                'category_id' => 12, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Pancakes',
+                'description' => '3 pcs pancakes served with butter & syrup',
+                'image' => 'pancakes.jpg',
+                'price' => 135.00,
+                'category_id' => 12, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            //Sandwiches 13
+            [
+                'name' => 'Club House Sandwich',
+                'description' => '3 layers sandwich with ham, cheese, bacon. egg and tomato',
+                'image' => 'club house sandwich.jpg',
+                'price' => 210.00,
+                'category_id' => 13, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Hamburger',
+                'description' => 'Burger patty with dressing, tomato & cucumber in a bun',
+                'image' => 'hamburger.png',
+                'price' => 85.00,
+                'category_id' => 13, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Cheese Burger',
+                'description' => 'Burger topped with cheese, dressing, tomato & cucumber',
+                'image' => 'cheese burger.jpg',
+                'price' => 95.00,
+                'category_id' => 13, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Crunchy Chicken Burger',
+                'description' => 'Crunchy  chicken breast fillet  with honey mustard sauce',
+                'image' => 'crunchy chicken burger.jpg',
+                'price' => 105.00,
+                'category_id' => 13, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Ham & Egg sandwich',
+                'description' => 'Sliced ham and scrambled egg in 2 pcs tasty bread',
+                'image' => 'ham and egg sandwich.jpg',
+                'price' => 70.00,
+                'category_id' => 13, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Ham & Cheese Sandwich',
+                'description' => 'Sliced ham and sliced cheese in 2 pcs tasty bread',
+                'image' => 'ham & cheese sandwich.jpg',
+                'price' => 70..00,
+                'category_id' => 13, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'French Toast',
+                'description' => 'Bread soaked in beaten eggs and then fried',
+                'image' => 'french toast.jpg',
+                'price' => 70.00,
+                'category_id' => 13, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Monte Cristo Sandwich',
+                'description' => 'French toast with ham and cheese filling',
+                'image' => 'monte cristo sandwich.jpg',
+                'price' => 85.00,
+                'category_id' => 13, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Toasted Bread',
+                'description' => 'Toasted halved tasty bread, perfect partner',
+                'image' => 'toasted bread.jpg',
+                'price' => 65.00,
+                'category_id' => 13, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            // Solo Plated 14
+            [
+                'name' => 'Chicken with Spaghetti',
+                'description' => '1 pc Fried Chicken with spaghetti and toasted bread',
+                'image' => 'chicken with spaghetti.jpg',
+                'price' => 185.00,
+                'category_id' => 14, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Chicken with Carbonara',
+                'description' => '1 pc Fried Chicken with carbonara and toasted bread',
+                'image' => 'chicken with carbornara.jpg',
+                'price' => 185.00,
+                'category_id' => 14, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Chicken with Palabok',
+                'description' => '1pc Fried Chicken with palabok and toasted bread',
+                'image' => 'chicken with palabok.jpg',
+                'price' => 185.00,
+                'category_id' => 14, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Chicken Pork Adobo',
+                'description' => 'Chicken and pork chunks cooked in soy sauce and with garlic, pepper and bay leaves',
+                'image' => 'chicken pork adobo.jpg',
+                'price' => 185.00,
+                'category_id' => 14, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Breaded Chicken / Pork',
+                'description' => 'Deep fried battered chicken / pork',
+                'image' => 'breaded chicken.jpg',
+                'price' => 185.00,
+                'category_id' => 14, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Tocino / Tapa / Daing na Bangus',
+                'description' => '',
+                'image' => 'tocino tapa daing na bangus.jpg',
+                'price' => 185.00,
+                'category_id' => 14, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            //Rice 15
+            [
+                'name' => 'Shanghai Rice',
+                'description' => '',
+                'image' => 'shanghai rice.jpg',
+                'price' => 245.00,
+                'category_id' => 15, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Biryani Rice',
+                'description' => '',
+                'image' => 'biryani rice.jpg',
+                'price' => 220.00,
+                'category_id' => 15, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Java Rice',
+                'description' => '',
+                'image' => 'java rice.jpg',
+                'price' => 195.00,
+                'category_id' => 15, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Garlic Rice',
+                'description' => '',
+                'image' => 'garlic rice.jpg',
+                'price' => 40.00,
+                'category_id' => 15, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Plain Rice',
+                'description' => '',
+                'image' => 'plain rice.jpg',
+                'price' => 35.00,
+                'category_id' => 15, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Half Rice',
+                'description' => '',
+                'image' => 'half rice.jpg',
+                'price' => 25.00,
+                'category_id' => 15, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            //Soups 16
+            [
+                'name' => 'Crab & Corn soup',
+                'description' => 'Serving is good for 2-3 persons',
+                'image' => 'crab and corn soup.jpg',
+                'price' => 145.00,
+                'category_id' => 16, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Mushroom Soup',
+                'description' => 'Serving is good for 2-3 persons',
+                'image' => 'mushroom soup.jpg',
+                'price' => 145.00,
+                'category_id' => 16, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+
+            [
+                'name' => 'Chicken & Corn Soup',
+                'description' => 'Serving is good for 2-3 persons',
+                'image' => 'chicken and corn soup.jpg',
+                'price' => 145.00,
+                'category_id' => 16, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+
+            [
+                'name' => 'Hototay Soup',
+                'description' => 'Serving is good for 2-3 persons',
+                'image' => 'hototay soup.jpg',
+                'price' => 220.00,
+                'category_id' => 16, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+
+            [
+                'name' => 'Nido Oriental Soup',
+                'description' => 'Serving is good for 2-3 persons',
+                'image' => 'nido oriental soup.jpg',
+                'price' => 145.00,
+                'category_id' => 16, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            //vegetables 17
+            [
+                'name' => 'Steamed Vegetables',
+                'description' => 'Sauteed mixed vegetables with bagoong',
+                'image' => 'steamed vegetables.jpg',
+                'price' => 160.00,
+                'category_id' => 17, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Pakbet',
+                'description' => 'Sauteed mixed vegetables with bagoong',
+                'image' => 'pakbet.jpg',
+                'price' => 190.00,
+                'category_id' => 17, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Chopsuey',
+                'description' => 'Medley of vegetables with small chunks of meat',
+                'image' => 'chopsuey.jpg',
+                'price' => 225.00,
+                'category_id' => 17, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Stir-Fried Vegetables',
+                'description' => 'Stir-fried thin slices of vegetables with oyster sauce',
+                'image' => 'stri fried vegetables.jpg',
+                'price' => 200.00,
+                'category_id' => 17, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Inihaw na Talong',
+                'description' => 'Char-grilled eggplant with tomatoes and onion served with bagoong balayan',
+                'image' => 'inihaw na talong.jpg',
+                'price' => 180.00,
+                'category_id' => 17, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Ensaladang Talong',
+                'description' => 'Grilled eggplant with chopped tomatoes & onion mixed in vinegar a perfect partner for grilled dishes',
+                'image' => 'ensaladang talong.jpg',
+                'price' => 190.00,
+                'category_id' => 17, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Ensaladang Ampalaya',
+                'description' => 'Blanched bitterground with tomatoes, onion and vinegar',
+                'image' => 'ensaladang ampalaya.jpg',
+                'price' => 200.00,
+                'category_id' => 17, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Ensaladang Pipino',
+                'description' => '',
+                'image' => 'ensaladang pipino.jpg',
+                'price' => 200.00,
+                'category_id' => 17, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Tortang Talong',
+                'description' => 'Egg omellete with chopped tomatoes & onion',
+                'image' => 'tortang talong.jpg',
+                'price' => 205.00,
+                'category_id' => 17, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Vegetable Tempura',
+                'description' => '',
+                'image' => 'vegetable tempura.jpg',
+                'price' => 300.00,
+                'category_id' => 17, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Ginataang Talong with Latik',
+                'description' => '',
+                'image' => 'ginataang talong with latik.jpg',
+                'price' => 225.00,
+                'category_id' => 17, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Ampalaya Con Carne',
+                'description' => '',
+                'image' => 'ampalaya con carne.jpg',
+                'price' => 280.00,
+                'category_id' => 17, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            //Biscuits 18
+            [
+                'name' => 'Bingo',
+                'description' => '',
+                'image' => 'bingo.jpg',
+                'price' => 10.00,
+                'category_id' => 18, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Bravo',
+                'description' => '',
+                'image' => 'bravo.jpg',
+                'price' => 10.00,
+                'category_id' => 18, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Chooey Mini',
+                'description' => '',
+                'image' => 'chooey.jpg',
+                'price' => 5.00,
+                'category_id' => 18, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Fita',
+                'description' => '',
+                'image' => 'fita.jpg',
+                'price' => 10.00,
+                'category_id' => 18, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Fudgee Bar',
+                'description' => '',
+                'image' => 'fudgee bar.jpg',
+                'price' => 10.00,
+                'category_id' => 18, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Hansel',
+                'description' => '',
+                'image' => 'hansel.jpg',
+                'price' => 10.00,
+                'category_id' => 18, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Inipit',
+                'description' => '',
+                'image' => 'inipit.jpg',
+                'price' => 10.00,
+                'category_id' => 18, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Magic Flakes',
+                'description' => '',
+                'image' => 'magic flakes.jpg',
+                'price' => 10.00,
+                'category_id' => 18, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Presto',
+                'description' => '',
+                'image' => 'presto.jpg',
+                'price' => 10.00,
+                'category_id' => 18, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Rebisco',
+                'description' => '',
+                'image' => 'rebisco.jpg',
+                'price' => 10.00,
+                'category_id' => 18, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Skyflakes',
+                'description' => '',
+                'image' => 'skyflakes.jpg',
+                'price' => 10.00,
+                'category_id' => 18, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            //Snacks Bar 19
+            [
+                'name' => '1.5 Coke',
+                'description' => '',
+                'image' => '1.5 coke.jpg',
+                'price' => 130.00,
+                'category_id' => 19, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => '1.5 Royal',
+                'description' => '',
+                'image' => '1.5 royal.jpg',
+                'price' => 130.00,
+                'category_id' => 19, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => '1.5 Sprite',
+                'description' => '',
+                'image' => '1.5 sprite.jpg',
+                'price' => 130.00,
+                'category_id' => 19, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'C2 solo',
+                'description' => '',
+                'image' => 'c2 solo.jpg',
+                'price' => 25.00,
+                'category_id' => 19, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Can Coke light',
+                'description' => '',
+                'image' => 'can coke light.jpg',
+                'price' =>  70.00,
+                'category_id' => 19, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Can Coke Zero',
+                'description' => '',
+                'image' => 'can coke zero.jpg',
+                'price' => 70.00,
+                'category_id' => 19, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Can Sprite Zero',
+                'description' => '',
+                'image' => 'can sprite zero.jpg',
+                'price' => 70.00,
+                'category_id' => 19, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Chuckie',
+                'description' => '',
+                'image' => 'chuckie.jpg',
+                'price' => 70.00,
+                'category_id' => 19, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Coke Can Reg',
+                'description' => '',
+                'image' => 'coke can reg.jpg',
+                'price' => 70.00,
+                'category_id' => 19, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Coke Zero 1.5L',
+                'description' => '',
+                'image' => 'coke zer 1.5L.jpg',
+                'price' => 130.00,
+                'category_id' => 19, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Del Monte 4s',
+                'description' => '',
+                'image' => 'del monte 4s.jpg',
+                'price' => 70.00,
+                'category_id' => 19, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Del Monte Mango',
+                'description' => '',
+                'image' => 'del monte mango.jpg',
+                'price' => 70.00,
+                'category_id' => 19, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Del Monte Orange',
+                'description' => '',
+                'image' => 'del monte orange.jpg',
+                'price' => 70.00,
+                'category_id' => 19, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Del Monte Pineapple',
+                'description' => '',
+                'image' => 'del monte pineapple.jpg',
+                'price' => 70.00,
+                'category_id' => 19, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'J @ Daniel cola',
+                'description' => '',
+                'image' => 'J @ Daniel cola.jpg',
+                'price' => 160.00,
+                'category_id' => 19, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Leche Flan',
+                'description' => '',
+                'image' => 'leche flan.jpg',
+                'price' => 150.00,
+                'category_id' => 19, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Mineral 330ml',
+                'description' => '',
+                'image' => 'mineral 330ml.jpg',
+                'price' => 15.00,
+                'category_id' => 19, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Mineral 500ml',
+                'description' => '',
+                'image' => 'mineral 500ml.jpg',
+                'price' => 22.00,
+                'category_id' => 19, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Mismo Coke',
+                'description' => '',
+                'image' => 'mismo coke.jpg',
+                'price' => 25.00,
+                'category_id' => 19, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Mismo Royal',
+                'description' => '',
+                'image' => 'mismo royal.jpg',
+                'price' => 25.00,
+                'category_id' => 19, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Mismo Sprite',
+                'description' => '',
+                'image' => 'mismo sprite.jpg',
+                'price' => 25.00,
+                'category_id' => 19, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Mountain Dew',
+                'description' => '',
+                'image' => 'mountain dew.jpg',
+                'price' => 25.00,
+                'category_id' => 19, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Nestea Cucu/Hblend',
+                'description' => '',
+                'image' => 'nestea.jpg',
+                'price' => 200.00,
+                'category_id' => 19, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Pineapple Powder',
+                'description' => '',
+                'image' => 'pineapple powder.jpg',
+                'price' => 180.00,
+                'category_id' => 19, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            //Shake 20
+            [
+                'name' => 'Apple',
+                'description' => '',
+                'image' => 'apple shake.jpg',
+                'price' => 155.00,
+                'category_id' => 20, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Avocado',
+                'description' => '',
+                'image' => 'avocado shake.jpg',
+                'price' => 155.00,
+                'category_id' => 20, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+
+            [
+                'name' => 'Banana',
+                'description' => '',
+                'image' => 'banana shake.jpg',
+                'price' => 155.00,
+                'category_id' => 20, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+
+            [
+                'name' => 'Buko',
+                'description' => '',
+                'image' => 'buko shake.jpg',
+                'price' => 155.00,
+                'category_id' => 20, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+
+            [
+                'name' => 'Guyabano',
+                'description' => '',
+                'image' => 'guyabano shake.jpg',
+                'price' => 155.00,
+                'category_id' => 20, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+
+            [
+                'name' => 'Mango',
+                'description' => '',
+                'image' => 'mango shake.jpg',
+                'price' => 155.00,
+                'category_id' => 20, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+
+            [
+                'name' => 'Melon',
+                'description' => '',
+                'image' => 'melon shake.jpg',
+                'price' => 155.00,
+                'category_id' => 20, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+
+            [
+                'name' => 'Strawberry',
+                'description' => '',
+                'image' => 'strawberry shake.jpg',
+                'price' => 180.00,
+                'category_id' => 20, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+
+            [
+                'name' => 'Watermelon',
+                'description' => '',
+                'image' => 'watermelon shake.jpg',
+                'price' => 155.00,
+                'category_id' => 20, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+
+            [
+                'name' => 'Rambutan',
+                'description' => '',
+                'image' => 'rambutan shake.jpg',
+                'price' => 155.00,
+                'category_id' => 20, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+
+            [
+                'name' => 'Lansones',
+                'description' => '',
+                'image' => 'lansones shake.jpg',
+                'price' => 155.00,
+                'category_id' => 20, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+
+            [
+                'name' => 'Durian',
+                'description' => '',
+                'image' => 'durian shake.jpg',
+                'price' => 155.00,
+                'category_id' => 20, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            //Medicine 21
+            [
+                'name' => 'Advil',
+                'description' => '',
+                'image' => 'advil.jpg',
+                'price' => 15.00,
+                'category_id' => 21, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Alaxan',
+                'description' => '',
+                'image' => 'alaxan.jpg',
+                'price' => 12.00,
+                'category_id' => 21, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Amoxicilin',
+                'description' => '',
+                'image' => 'amoxicilin.jpg',
+                'price' => 15.00,
+                'category_id' => 21, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Ascop lagundi',
+                'description' => '',
+                'image' => 'ascop lagundi.jpg',
+                'price' => 10.00,
+                'category_id' => 21, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Bioflu',
+                'description' => '',
+                'image' => 'bioflu.jpg',
+                'price' => 12.00,
+                'category_id' => 21, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Biogesic',
+                'description' => '',
+                'image' => 'biogesic.jpg',
+                'price' => 7.00,
+                'category_id' => 21, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Bonamine',
+                'description' => '',
+                'image' => 'bonamine.jpg',
+                'price' => 15.00,
+                'category_id' => 21, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Carboceistine',
+                'description' => '',
+                'image' => 'carboceistine.jpg',
+                'price' => 12.00,
+                'category_id' => 21, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Decolgen',
+                'description' => '',
+                'image' => 'decolgen.jpg',
+                'price' => 10.00,
+                'category_id' => 21, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Diatabs',
+                'description' => '',
+                'image' => 'diatabs.jpg',
+                'price' => 15.00,
+                'category_id' => 21, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Dolfenal',
+                'description' => '',
+                'image' => 'dolfenal.jpg',
+                'price' => 40.00,
+                'category_id' => 21, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Imodium',
+                'description' => '',
+                'image' => 'imodium.jpg',
+                'price' => 25.00,
+                'category_id' => 21, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Kremil S',
+                'description' => '',
+                'image' => 'kremil s.jpg',
+                'price' => 15.00,
+                'category_id' => 21, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Lomotil',
+                'description' => '',
+                'image' => 'lomotil.jpg',
+                'price' => 20.00,
+                'category_id' => 21, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Medicol',
+                'description' => '',
+                'image' => 'medicol.jpg',
+                'price' => 10.00,
+                'category_id' => 21, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Mefenamic',
+                'description' => '',
+                'image' => 'mefenamic.jpg',
+                'price' => 10.00,
+                'category_id' => 21, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Neosep',
+                'description' => '',
+                'image' => 'neosep.jpg',
+                'price' => 7.00,
+                'category_id' => 21, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Paracetamol',
+                'description' => '',
+                'image' => 'paracetamol.jpg',
+                'price' => 7.00,
+                'category_id' => 21, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Tuseran',
+                'description' => '',
+                'image' => 'tuseran.jpg',
+                'price' => 12.00,
+                'category_id' => 21, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            //Groceries 22
+            [
+                'name' => 'Ballpen',
+                'description' => '',
+                'image' => 'ballpen.jpg',
+                'price' => 10.00,
+                'category_id' => 22, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Battery AA',
+                'description' => '',
+                'image' => 'battery AA.jpg',
+                'price' => 25.00,
+                'category_id' => 22, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Battery AAA',
+                'description' => '',
+                'image' => 'battery AAA.jpg',
+                'price' => 25.00,
+                'category_id' => 22, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Clear Shampoo',
+                'description' => '',
+                'image' => 'clear shampoo.jpg',
+                'price' => 10.00,
+                'category_id' => 22, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Creamsilk',
+                'description' => '',
+                'image' => 'creamsilk.jpg',
+                'price' => 10.00,
+                'category_id' => 22, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Head & Shoulder',
+                'description' => '',
+                'image' => 'head and shoulder.jpg',
+                'price' => 10.00,
+                'category_id' => 22, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'LM Canton',
+                'description' => '',
+                'image' => 'LM canton.jpg',
+                'price' => 25.00,
+                'category_id' => 22, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Marlboro',
+                'description' => '',
+                'image' => 'marlboro.jpg',
+                'price' => 210.00,
+                'category_id' => 22, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Marlboro Half',
+                'description' => '',
+                'image' => 'marlboro.jpg',
+                'price' => 150.00,
+                'category_id' => 22, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Palmolive Shampoo',
+                'description' => '',
+                'image' => 'palmolive shampoo.jpg',
+                'price' => 10.00,
+                'category_id' => 22, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Posporo',
+                'description' => '',
+                'image' => 'posporo.jpg',
+                'price' => 5.00,
+                'category_id' => 22, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Safeguard Big',
+                'description' => '',
+                'image' => 'safeguard.jpg',
+                'price' => 35.00,
+                'category_id' => 22, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Safeguard Small',
+                'description' => '',
+                'image' => 'safeguard small.jpg',
+                'price' => 25.00,
+                'category_id' => 22, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Sanitary Napkin',
+                'description' => '',
+                'image' => 'sanitary napkin.jpg',
+                'price' => 10.00,
+                'category_id' => 22, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Soap Bar',
+                'description' => '',
+                'image' => 'soapbar.jpg',
+                'price' => 10.00,
+                'category_id' => 22, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Suka-datu puti',
+                'description' => '',
+                'image' => 'suka datu puti.jpg',
+                'price' => 10.00,
+                'category_id' => 22, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Sunsilk Shampoo',
+                'description' => '',
+                'image' => 'sunsilk shampoo.jpg',
+                'price' => 10.00,
+                'category_id' => 22, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Surf Fab',
+                'description' => '',
+                'image' => 'surf fab.jpg',
+                'price' => 10.00,
+                'category_id' => 22, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Surf Powder',
+                'description' => '',
+                'image' => 'surf powder.jpg',
+                'price' => 10.00,
+                'category_id' => 22, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Tang Guyabano',
+                'description' => '',
+                'image' => 'tang guyabano.jpg',
+                'price' => 50.00,
+                'category_id' => 22, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Tang Lemon',
+                'description' => '',
+                'image' => 'tang lemon.jpg',
+                'price' => 50.00,
+                'category_id' => 22, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Tang Lychee',
+                'description' => '',
+                'image' => 'tang lychee.jpg',
+                'price' => 50.00,
+                'category_id' => 22, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Toothpaste',
+                'description' => '',
+                'image' => 'toothpaste.jpg',
+                'price' => 10.00,
+                'category_id' => 22, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Umbrella',
+                'description' => '',
+                'image' => 'umbrella.jpg',
+                'price' => 200.00,
+                'category_id' => 22, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            //Liquors 23
+            [
+                'name' => 'Alfonso 1L',
+                'description' => '',
+                'image' => 'alfonso 1L.jpg',
+                'price' => 700.00,
+                'category_id' => 23, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Arbor Mist',
+                'description' => '',
+                'image' => 'arbor mist.jpg',
+                'price' => 500.00,
+                'category_id' => 23, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Artic Vodka',
+                'description' => '',
+                'image' => 'artic vodka.jpg',
+                'price' => 550.00,
+                'category_id' => 23, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Bagets',
+                'description' => '',
+                'image' => 'bagets.jpg',
+                'price' => 250.00,
+                'category_id' => 23, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Black Label',
+                'description' => '',
+                'image' => 'black label.jpg',
+                'price' => 2800.00,
+                'category_id' => 23, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Carlo Rossi',
+                'description' => '',
+                'image' => 'carlo rossi.jpg',
+                'price' => 650.00,
+                'category_id' => 23, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Chivas Regal',
+                'description' => '',
+                'image' => 'chivas regal.jpg',
+                'price' => 2500.00,
+                'category_id' => 23, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Decano',
+                'description' => '',
+                'image' => 'decano.jpg',
+                'price' => 200.00,
+                'category_id' => 23, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Don Enrique',
+                'description' => '',
+                'image' => 'don enrique.jpg',
+                'price' => 550.00,
+                'category_id' => 23, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Double Black',
+                'description' => '',
+                'image' => 'double black.jpg',
+                'price' => 4500.00,
+                'category_id' => 23, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'El Hombre',
+                'description' => '',
+                'image' => 'el hombre.jpg',
+                'price' => 700.00,
+                'category_id' => 23, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Emperador Light',
+                'description' => '',
+                'image' => 'emperador light 750.jpg',
+                'price' => 350.00,
+                'category_id' => 23, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Fundador Litro Light',
+                'description' => '',
+                'image' => 'fundador litro light.jpg',
+                'price' => 1050.00,
+                'category_id' => 23, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Green Label',
+                'description' => '',
+                'image' => 'green label.jpg',
+                'price' => 4500.00,
+                'category_id' => 23, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'GSM Blue',
+                'description' => '',
+                'image' => 'gsm blue.jpg',
+                'price' => 350.00,
+                'category_id' => 23, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Lime Juice 375ml',
+                'description' => '',
+                'image' => 'lime juice.jpg',
+                'price' => 70.00,
+                'category_id' => 23, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Maria Clara',
+                'description' => '',
+                'image' => 'maria clara.jpg',
+                'price' => 500.00,
+                'category_id' => 23, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'May Wine',
+                'description' => '',
+                'image' => 'may wine.jpg',
+                'price' => 550.00,
+                'category_id' => 23, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Novelino',
+                'description' => '',
+                'image' => 'novelino.jpg',
+                'price' => 550.00,
+                'category_id' => 23, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Paul Masson',
+                'description' => '',
+                'image' => 'paul masson.jpg',
+                'price' => 650.00,
+                'category_id' => 23, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Perlino',
+                'description' => '',
+                'image' => 'perlino.jpg',
+                'price' => 500.00,
+                'category_id' => 23, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Soju',
+                'description' => '',
+                'image' => 'soju.jpg',
+                'price' => 180.00,
+                'category_id' => 23, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Tanduay 375ml',
+                'description' => '',
+                'image' => 'tanduay 375ml.jpg',
+                'price' => 250.00,
+                'category_id' => 23, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Tanduay 750ml',
+                'description' => '',
+                'image' => 'tanduay 750ml.jpg',
+                'price' => 400.00,
+                'category_id' => 23, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+            [
+                'name' => 'Viñedos de Chile',
+                'description' => '',
+                'image' => 'vinedos de chile.jpg',
+                'price' => 900.00,
+                'category_id' => 23, // Assuming there is a category with ID 1
+                'orders' => 0,
+                'archived_at' => null
+            ],
+
+            
 
             // Add more entries as needed
         ];
