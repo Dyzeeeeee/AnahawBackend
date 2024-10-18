@@ -177,7 +177,7 @@ class MenuSeeder extends Seeder
             [
                 'name' => 'Mule',
                 'description' => '',
-                'image' => '',
+                'image' => 'mule.jpg',
                 'price' => 75.00,
                 'category_id' => 2, // Assuming there is a category with ID 1
                 'orders' => 0,
@@ -186,7 +186,7 @@ class MenuSeeder extends Seeder
             [
                 'name' => 'SML can',
                 'description' => '',
-                'image' => '',
+                'image' => 'smlcan.jpg',
                 'price' => 75.00,
                 'category_id' => 2, // Assuming there is a category with ID 1
                 'orders' => 0,
@@ -195,7 +195,7 @@ class MenuSeeder extends Seeder
             [
                 'name' => 'Tanduay ice',
                 'description' => '',
-                'image' => '',
+                'image' => 'tanduay ice.jpg',
                 'price' => 75.00,
                 'category_id' => 2, // Assuming there is a category with ID 1
                 'orders' => 0,
@@ -204,7 +204,7 @@ class MenuSeeder extends Seeder
             [
                 'name' => 'Beer na Beer',
                 'description' => '',
-                'image' => '',
+                'image' => 'beer na beer.jpg',
                 'price' => 75.00,
                 'category_id' => 2, // Assuming there is a category with ID 1
                 'orders' => 0,
@@ -451,7 +451,7 @@ class MenuSeeder extends Seeder
             [
                 'name' => 'Birch Tree',
                 'description' => '',
-                'image' => '',
+                'image' => 'birch tree.jpg',
                 'price' => 25.00,
                 'category_id' => 4, // Assuming there is a category with ID 1
                 'orders' => 0,
@@ -460,7 +460,7 @@ class MenuSeeder extends Seeder
             [
                 'name' => 'Brewed Coffee',
                 'description' => '',
-                'image' => '',
+                'image' => 'brewed coffee.jpg',
                 'price' => 60.00,
                 'category_id' => 4, // Assuming there is a category with ID 1
                 'orders' => 0,
@@ -469,7 +469,7 @@ class MenuSeeder extends Seeder
             [
                 'name' => 'Coffee Mate',
                 'description' => '',
-                'image' => '',
+                'image' => 'coffee mate.jpg',
                 'price' => 5.00,
                 'category_id' => 4, // Assuming there is a category with ID 1
                 'orders' => 0,
@@ -478,7 +478,7 @@ class MenuSeeder extends Seeder
             [
                 'name' => 'Coffee Stick',
                 'description' => '',
-                'image' => '',
+                'image' => 'coffee stick.jpg',
                 'price' => 25.00,
                 'category_id' => 4, // Assuming there is a category with ID 1
                 'orders' => 0,
@@ -487,7 +487,7 @@ class MenuSeeder extends Seeder
             [
                 'name' => 'Kopiko',
                 'description' => '',
-                'image' => '',
+                'image' => 'kopiko.jpg',
                 'price' => 25.00,
                 'category_id' => 4, // Assuming there is a category with ID 1
                 'orders' => 0,
@@ -496,7 +496,7 @@ class MenuSeeder extends Seeder
             [
                 'name' => 'Nescafe 3in1',
                 'description' => '',
-                'image' => '',
+                'image' => 'nescafe3n1.jpg',
                 'price' => 25.00,
                 'category_id' => 4, // Assuming there is a category with ID 1
                 'orders' => 0,
@@ -634,7 +634,7 @@ class MenuSeeder extends Seeder
             [
                 'name' => 'Grilled Tuna Belly',
                 'description' => 'Per gram',
-                'image' => '',
+                'image' => 'grilled tuna belly.jpg',
                 'price' => 1.2,
                 'category_id' => 6, // Assuming there is a category with ID 1
                 'orders' => 0,
@@ -701,7 +701,7 @@ class MenuSeeder extends Seeder
             [
                 'name' => 'Inihaw na Pusit (per gram)',
                 'description' => 'Grilled whole squid bashed in savory sauce',
-                'image' => '',
+                'image' => 'inihaw na pusit.jpg',
                 'price' => 1.60.00,      
                 'category_id' => 8, // Assuming there is a category with ID 1
                 'orders' => 0,
@@ -710,7 +710,7 @@ class MenuSeeder extends Seeder
             [
                 'name' => 'Calamares Fritos',
                 'description' => 'Fried Squid rings in Japanese breadcrumbs',
-                'image' => '',
+                'image' => 'calamares frito.jpg',
                 'price' => 290.00,      
                 'category_id' => 8, // Assuming there is a category with ID 1
                 'orders' => 0,
@@ -719,7 +719,7 @@ class MenuSeeder extends Seeder
             [
                 'name' => 'Shrimp Halabos',
                 'description' => 'Shrimps steamed with it\'s own juice & cooked with little oil',
-                'image' => '',
+                'image' => 'shrimp halabos.jpg',
                 'price' => 380.00,      
                 'category_id' => 8, // Assuming there is a category with ID 1
                 'orders' => 0,
@@ -728,7 +728,7 @@ class MenuSeeder extends Seeder
             [
                 'name' => 'Sinigang na Hipon',
                 'description' => 'Sour soup with shrimp and vegetables',
-                'image' => '',
+                'image' => 'sinigang na hipon.jpg',
                 'price' => 425.00,      
                 'category_id' => 8, // Assuming there is a category with ID 1
                 'orders' => 0,
@@ -737,7 +737,7 @@ class MenuSeeder extends Seeder
             [
                 'name' => 'Camaron Rebosado',
                 'description' => 'deep fried batter coated shrimp without the shells',
-                'image' => '',
+                'image' => 'camaron rebosado.jpg',
                 'price' => 380.00,      
                 'category_id' => 8, // Assuming there is a category with ID 1
                 'orders' => 0,
@@ -746,7 +746,7 @@ class MenuSeeder extends Seeder
             [
                 'name' => 'Sauteed Shrimp with Chinese Mushroom',
                 'description' => '',
-                'image' => '',
+                'image' => 'sauteed shrimp with chinese mushroom.jpg',
                 'price' => 410.00,      
                 'category_id' => 8, // Assuming there is a category with ID 1
                 'orders' => 0,
@@ -755,7 +755,7 @@ class MenuSeeder extends Seeder
             [
                 'name' => 'Shrimp Tempura',
                 'description' => 'shrimp in tempura batter deep fried served with tempura sauce',
-                'image' => '',
+                'image' => 'shrimp tempura.jpg',
                 'price' => 380.00,      
                 'category_id' => 8, // Assuming there is a category with ID 1
                 'orders' => 0,
@@ -764,7 +764,7 @@ class MenuSeeder extends Seeder
             [
                 'name' => 'Mixed Tempura',
                 'description' => 'shrimp and vegetables in tempura batter deep fried served with tempura sauce and sour sauce',
-                'image' => '',
+                'image' => 'mixed tempura.jpg',
                 'price' => 650.00,      
                 'category_id' => 8, // Assuming there is a category with ID 1
                 'orders' => 0,
@@ -773,7 +773,7 @@ class MenuSeeder extends Seeder
             [
                 'name' => 'Baked Scallop',
                 'description' => '',
-                'image' => '',
+                'image' => 'baked scallop.jpg',
                 'price' => 235.00,      
                 'category_id' => 8, // Assuming there is a category with ID 1
                 'orders' => 0,
