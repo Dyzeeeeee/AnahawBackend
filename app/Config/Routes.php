@@ -37,6 +37,7 @@ $routes->get('/get-orders/(:segment)', 'OrderController::getOrdersBySession/$1')
 $routes->get('/get-orders', 'OrderController::getOrders');
 $routes->post('/add-order', 'OrderController::addOrder');
 $routes->put('/update-order/(:segment)', 'OrderController::updateOrder/$1');
+$routes->post('/batch-update-orders', 'OrderController::batchUpdateOrders');
 $routes->delete('/delete-order/(:segment)', 'OrderController::deleteOrder/$1');
 $routes->get('/get-latest-order', 'OrderController::getLatestOrder');
 
@@ -46,6 +47,10 @@ $routes->post('/create-online-order', 'OnlineOrderController::startOnlineOrder')
 $routes->put('/update-online-order/(:segment)', 'OnlineOrderController::updateOnlineOrder/$1');
 $routes->get('/get-online-order/(:num)', 'OnlineOrderController::getOnlineOrder/$1');
 $routes->put('/confirmOrder/(:segment)', 'OnlineOrderController::confirmOrder/$1');
+$routes->put('/confirmOnlineOrder/(:segment)', 'OnlineOrderController::confirmOnlineOrder/$1');
+$routes->get('/get-online-orders', 'OnlineOrderController::getOnlineOrders');
+$routes->get('/get-all-online-orders', 'OnlineOrderController::getAllOnlineOrders');
+$routes->post('delete-note', 'OrderDetailsController::deleteNote');
 
 
 $routes->get('/get-order-details', 'OrderDetailsController::getAllOrderDetails');
@@ -54,6 +59,7 @@ $routes->post('/add-or-update-order-detail', 'OrderDetailsController::addOrUpdat
 $routes->put('/update-order-detail/(:segment)', 'OrderDetailsController::updateOrderDetail/$1');
 $routes->delete('/delete-order-detail/(:segment)', 'OrderDetailsController::deleteOrderDetail/$1');
 $routes->post('/update-order-status', 'OrderDetailsController::updateOrderStatus');
+// $routes->delete('/remove-order-detail/(:num)', 'OrderDetailsController::deleteOrderDetail/$1');
 
 
 

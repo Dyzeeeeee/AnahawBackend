@@ -12,7 +12,7 @@ class OrderModel extends Model
     protected $returnType = 'array';
     protected $useSoftDeletes = false;
     protected $protectFields = true;
-    protected $allowedFields = ['customer_id', 'order_date', 'total_price', 'status', 'session_id', 'tendered', 'change1', 'service', 'note', 'payment_method', 'completed'];
+    protected $allowedFields = ['customer_id', 'created_at', 'updated_at', 'total_price', 'status', 'session_id', 'tendered', 'change1', 'service', 'note', 'payment_method', 'completed', 'customer_tag'];
     public function getOrdersBySession($sessionId)
     {
         return $this->where('session_id', $sessionId)->findAll();
@@ -20,7 +20,7 @@ class OrderModel extends Model
 
     public function getOrdersWithDetails()
     {
-        $results = $this->select('orders.*, order_details.id as detail_id, menu.name as menu_name, menu.price as menu_price, order_details.quantity, order_details.status as detail_status, order_details.subtotal, categories.name as category_name, users.firstname, users.lastname')
+        $results = $this->select('orders.*, order_details.id as detail_id, menu.name as menu_name, menu.price as menu_price, menu.image as menu_image, order_details.quantity, order_details.note, order_details.status as detail_status, order_details.subtotal, categories.name as category_name, categories.icon as category_icon, users.firstname, users.lastname')
             ->join('order_details', 'order_details.order_id = orders.id', 'left')
             ->join('menu', 'menu.id = order_details.menu_item_id', 'left')
             ->join('categories', 'categories.id = menu.category_id', 'left')
@@ -37,12 +37,15 @@ class OrderModel extends Model
                 $orders[$orderId] = [
                     'id' => $row['id'],
                     'customer_id' => $row['customer_id'],
+                    'customer_tag' => $row['customer_tag'],
                     'customer_name' => $row['firstname'] . ' ' . $row['lastname'], // Concatenate firstname and lastname
-                    'order_date' => $row['order_date'],
+                    'created_at' => $row['created_at'],
+                    'updated_at' => $row['updated_at'],
                     'total_price' => $row['total_price'],
                     'status' => $row['status'],
                     'session_id' => $row['session_id'],
                     'tendered' => $row['tendered'],
+                    'completed' => $row['completed'],
                     'change1' => $row['change1'],
                     'service' => $row['service'],
                     'note' => $row['note'],
@@ -57,10 +60,14 @@ class OrderModel extends Model
                     'detail_id' => $row['detail_id'],
                     'menu_name' => $row['menu_name'],
                     'menu_price' => $row['menu_price'],
+                    'menu_image' => $row['menu_image'], // Add the image field
                     'quantity' => $row['quantity'],
                     'subtotal' => $row['subtotal'],
+                    'note' => $row['note'],
                     'status' => $row['detail_status'],
-                    'category_name' => $row['category_name']
+                    'category_name' => $row['category_name'],
+                    'category_icon' => $row['category_icon'],
+
                 ];
             }
         }
@@ -68,10 +75,11 @@ class OrderModel extends Model
         return array_values($orders); // Reset keys and return results
     }
 
+
     public function getLatestOrder()
     {
-        return $this->orderBy('order_date', 'DESC') // or 'id', 'DESC'
-                    ->first();
+        return $this->orderBy('created_at   ', 'DESC') // or 'id', 'DESC'
+            ->first();
     }
 
 

@@ -19,6 +19,11 @@ class CreateCategoryTable extends Migration
                 'type' => 'VARCHAR',
                 'constraint' => 255,
             ],
+            'icon' => [ // Adding the icon field
+                'type' => 'VARCHAR',
+                'constraint' => 255,
+                'null' => true, // Set to true if the icon is optional
+            ],
         ]);
 
         $this->forge->addKey('id', true);

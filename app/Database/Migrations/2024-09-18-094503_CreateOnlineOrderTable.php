@@ -39,6 +39,11 @@ class CreateOnlineOrderTable extends Migration
                 'constraint' => '10,2',
                 'default'    => '0.00',
             ],
+            'customer_tag' => [
+                'type'       => 'ENUM',
+                'constraint' => range('A', 'Z'), // Create an enum from A to Z
+                'null'       => true, // Set to false if you want this field to be required
+            ],
             'created_at datetime default current_timestamp',
             'updated_at datetime default current_timestamp on update current_timestamp',
         ]);

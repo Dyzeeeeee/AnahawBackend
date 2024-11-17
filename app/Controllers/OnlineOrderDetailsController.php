@@ -23,8 +23,8 @@ class OnlineOrderDetailsController extends ResourceController
 
         // Try to find an existing detail entry
         $existingDetail = $model->where('online_order_id', $data['online_order_id'])
-                                ->where('menu_item_id', $data['menu_item_id'])
-                                ->first();
+            ->where('menu_item_id', $data['menu_item_id'])
+            ->first();
 
         if ($existingDetail) {
             // If exists, update the existing record
@@ -48,14 +48,14 @@ class OnlineOrderDetailsController extends ResourceController
     public function getOnlineOrderDetails($orderId)
     {
         $model = new OnlineOrderDetailsModel();
-    
+
         // Ensure the order ID is provided
         if (!$orderId) {
             return $this->failValidationErrors('Order ID is required');
         }
-    
+
         $orderDetails = $model->getOrderWithMenuDetails($orderId);
-    
+
         // Check if any order details were found
         if (is_array($orderDetails) && count($orderDetails) > 0) {
             return $this->respond($orderDetails);
@@ -64,30 +64,30 @@ class OnlineOrderDetailsController extends ResourceController
             return $this->respond([]);
         }
     }
-    
+
 
     public function deleteOnlineOrderDetail($detailId)
-{
-    $model = new OnlineOrderDetailsModel();
+    {
+        $model = new OnlineOrderDetailsModel();
 
-    // Check if the detail ID is provided
-    if (!$detailId) {
-        return $this->failValidationErrors('Detail ID is required');
+        // Check if the detail ID is provided
+        if (!$detailId) {
+            return $this->failValidationErrors('Detail ID is required');
+        }
+
+        // Try to find an existing detail entry
+        $existingDetail = $model->find($detailId);
+
+        if (!$existingDetail) {
+            return $this->failNotFound('No detail fsound with ID: ' . $detailId);
+        }
+
+        // Attempt to delete the detail entry
+        if ($model->delete($detailId)) {
+            return $this->respondDeleted(['message' => 'Order detail deleted successfully.']);
+        } else {
+            return $this->failServerError('Failed to delete the order detail.');
+        }
     }
-
-    // Try to find an existing detail entry
-    $existingDetail = $model->find($detailId);
-
-    if (!$existingDetail) {
-        return $this->failNotFound('No detail found with ID: ' . $detailId);
-    }
-
-    // Attempt to delete the detail entry
-    if ($model->delete($detailId)) {
-        return $this->respondDeleted(['message' => 'Order detail deleted successfully.']);
-    } else {
-        return $this->failServerError('Failed to delete the order detail.');
-    }
-}
 
 }

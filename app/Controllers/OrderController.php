@@ -27,8 +27,7 @@ class OrderController extends ResourceController
         $model = new OrderModel();
         $data = $this->request->getJSON(true);
 
-        // Set the order_date to the current timestamp
-        $data['order_date'] = date('Y-m-d H:i:s', time() + 6 * 3600); // Current timestamp +6 hours
+        // $data['created_at'] = date('Y-m-d H:i:s', time() + 8 * 3600); 
 
         if ($model->insert($data)) {
             $response = [
@@ -123,4 +122,99 @@ class OrderController extends ResourceController
             return $this->failNotFound('No orders found.');
         }
     }
+
+    public function batchUpdateOrders()
+    {
+        $model = new OrderModel();
+        $data = $this->request->getJSON(true); // Get the incoming data as an array
+
+        // Ensure that orders data is provided and is an array
+        if (empty($data['orders']) || !is_array($data['orders'])) {
+            return $this->fail('No valid orders data provided', ResponseInterface::HTTP_BAD_REQUEST);
+        }
+
+        $orders = $data['orders'];
+        $updatedOrders = [];
+        $failedOrders = [];
+
+        foreach ($orders as $order) {
+            if (isset($order['id'])) {
+                // Find the order by ID
+                $currentOrder = $model->find($order['id']);
+
+                if (!$currentOrder) {
+                    // Order not found, log error and skip this order
+                    $failedOrders[] = [
+                        'order_id' => $order['id'],
+                        'message' => 'Order not found'
+                    ];
+                    continue;  // Skip this order if not found
+                }
+
+                // Prevent updating completed or cancelled orders if status is being changed
+                if (in_array($currentOrder['status'], ['completed', 'cancelled']) && isset($order['status'])) {
+                    $failedOrders[] = [
+                        'order_id' => $order['id'],
+                        'message' => 'Cannot update completed or cancelled orders'
+                    ];
+                    continue;  // Skip this order if status update is forbidden
+                }
+
+                // Prepare the data to update (only the necessary fields)
+                $updateData = [];
+                if (isset($order['status'])) {
+                    $updateData['status'] = $order['status'];
+                }
+                if (isset($order['tendered'])) {
+                    $updateData['tendered'] = $order['tendered'];
+                }
+                if (isset($order['change1'])) {
+                    $updateData['change1'] = $order['change1'];
+                }
+                if (isset($order['completed'])) {
+                    $updateData['completed'] = $order['completed'];
+                }
+
+                // Attempt to update the order
+                if ($model->update($order['id'], $updateData)) {
+                    $updatedOrders[] = $order['id'];
+                } else {
+                    $failedOrders[] = [
+                        'order_id' => $order['id'],
+                        'message' => 'Failed to update order'
+                    ];
+                }
+            } else {
+                // Handle missing order ID
+                $failedOrders[] = [
+                    'order_id' => null,
+                    'message' => 'Order ID is missing'
+                ];
+            }
+        }
+
+        // Prepare the response
+        $response = [];
+
+        if (!empty($updatedOrders)) {
+            $response['status'] = 'success';
+            $response['updated_orders'] = $updatedOrders;
+        }
+
+        if (!empty($failedOrders)) {
+            $response['failed_orders'] = $failedOrders;
+        }
+
+        // If there are no updated or failed orders, return a generic response
+        if (empty($updatedOrders) && empty($failedOrders)) {
+            $response = [
+                'status' => 'no updates',
+                'message' => 'No orders were updated or failed.'
+            ];
+        }
+
+        return $this->respond($response);
+    }
+
+
 }

@@ -20,13 +20,16 @@ class CreateOrdersTable extends Migration
                 'unsigned' => true,
                 'null' => true,
             ],
-            'order_date' => [
-                'type' => 'TIMESTAMP',
-                'null' => true, // Optional: Allow null values if needed
-            ],
+            'created_at datetime default current_timestamp',
+            'updated_at datetime default current_timestamp on update current_timestamp',
             'total_price' => [
                 'type' => 'DECIMAL',
                 'constraint' => '10,2',
+            ],
+            'customer_tag' => [
+                'type'       => 'ENUM',
+                'constraint' => range('A', 'Z'), // Create an enum from A to Z
+                'null'       => true, // Set to false if you want this field to be required
             ],
             'status' => [
                 'type' => 'ENUM',

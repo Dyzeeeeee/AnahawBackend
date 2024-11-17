@@ -11,73 +11,105 @@ class OrderDetailsController extends ResourceController
 {
     use ResponseTrait;
 
-    public function getAllOrderDetails()
+    public function addOrUpdateOrderDetail()
     {
         $model = new OrderDetailsModel();
-        $orderDetails = $model->findAll(); // This retrieves all session records
+        $data = $this->request->getJSON(true);
 
+        // Check for necessary fields; assuming 'order_id' and 'menu_item_id' are required to identify a record
+        if (!isset($data['order_id'], $data['menu_item_id'])) {
+            return $this->failValidationErrors('Both order_id and menu_item_id are required.');
+        }
+
+        // Try to find an existing detail entry
+        $existingDetail = $model->where('order_id', $data['order_id'])
+            ->where('menu_item_id', $data['menu_item_id'])
+            ->first();
+
+        if ($existingDetail) {
+            // If exists, update the existing record
+            $updateStatus = $model->update($existingDetail['id'], $data);
+            if ($updateStatus) {
+                return $this->respondUpdated(['message' => 'Order detail updated successfully.', 'data' => $model->find($existingDetail['id'])]);
+            } else {
+                return $this->failServerError('Failed to update the order detail.');
+            }
+        } else {
+            // If not exists, create a new record
+            $insertedId = $model->insert($data);
+            if ($insertedId) {
+                return $this->respondCreated(['message' => 'Order detail created successfully.', 'data' => $model->find($insertedId)]);
+            } else {
+                return $this->failServerError('Failed to create a new order detail.');
+            }
+        }
+    }
+    public function getAllOrderDetails()
+    {
+        // Load the OrderDetailsModel
+        $model = new OrderDetailsModel();
+
+        // Perform a query to join the users table and fetch the needed fields
+        $orderDetails = $model
+            ->select('order_details.*, users.firstname AS kitchen_firstname, users.lastname AS kitchen_lastname,menu.name AS menu_name, menu.image AS menu_image ') // Select necessary columns
+            ->join('users', 'users.id = order_details.kitchen_id', 'left') // Join users table on kitchen_id
+            ->join('menu', 'menu.id = order_details.menu_item_id', 'left') // Join users table on kitchen_id
+            ->findAll(); // Execute the query and get the results
+
+        // Return the order details as JSON response
         return $this->respond($orderDetails);
     }
     public function getOrderDetails($orderId)
     {
         $model = new OrderDetailsModel();
 
-        // Validate that the $orderId is provided and is a numeric value
-        if (!is_numeric($orderId)) {
-            return $this->failValidationErrors("Invalid order ID.");
+        // Ensure the order ID is provided
+        if (!$orderId) {
+            return $this->failValidationErrors('Order ID is required');
         }
 
-        // Retrieve order details with menu item details
         $orderDetails = $model->getOrderWithMenuDetails($orderId);
 
-        if (empty($orderDetails)) {
-            return $this->failNotFound("No order details found for Order ID: {$orderId}");
+        // Check if any order details were found
+        if (is_array($orderDetails) && count($orderDetails) > 0) {
+            return $this->respond($orderDetails);
+        } else {
+            // Instead of failing, return an empty array with a success response
+            return $this->respond([]);
         }
-
-        return $this->respond($orderDetails);
     }
 
 
-    public function addOrUpdateOrderDetail()
+    public function addOrUpdateOnlineOrderDetail()
     {
         $model = new OrderDetailsModel();
         $data = $this->request->getJSON(true);
 
-        if (!$data) {
-            return $this->failValidationErrors("No data provided.");
+        // Check for necessary fields; assuming 'order_id' and 'menu_item_id' are required to identify a record
+        if (!isset($data['order_id'], $data['menu_item_id'])) {
+            return $this->failValidationErrors('Both order_id and menu_item_id are required.');
         }
 
-        // Check if order detail with the given menu_item_id already exists in this order
-        $existingDetail = $model->where([
-            'order_id' => $data['order_id'],
-            'menu_item_id' => $data['menu_item_id']
-        ])->first();
+        // Try to find an existing detail entry
+        $existingDetail = $model->where('order_id', $data['order_id'])
+            ->where('menu_item_id', $data['menu_item_id'])
+            ->first();
 
         if ($existingDetail) {
-            // If exists, update the quantity and subtotal
-            $updatedQuantity = $existingDetail['quantity'] + 1;
-            $updatedSubtotal = $updatedQuantity * $data['price']; // Assuming price is passed correctly
-            $updateData = [
-                'quantity' => $updatedQuantity,
-                'subtotal' => $updatedSubtotal
-            ];
-            if ($model->update($existingDetail['id'], $updateData)) {
-                return $this->respondUpdated($updateData, 'Order detail updated successfully.');
+            // If exists, update the existing record
+            $updateStatus = $model->update($existingDetail['id'], $data);
+            if ($updateStatus) {
+                return $this->respondUpdated(['message' => 'Order detail updated successfully.', 'data' => $model->find($existingDetail['id'])]);
             } else {
-                return $this->failServerError('Failed to update order detail.');
+                return $this->failServerError('Failed to update the order detail.');
             }
         } else {
-            // If not exists, add a new order detail
-            $newDetailData = [
-                'order_id' => $data['order_id'],
-                'menu_item_id' => $data['menu_item_id'],
-                'quantity' => 1, // Default quantity is 1
-                'subtotal' => $data['subtotal'] // Assuming price is provided
-            ];
-            if ($model->insert($newDetailData)) {
-                return $this->respondCreated($newDetailData, 'Order detail added successfully.');
+            // If not exists, create a new record
+            $insertedId = $model->insert($data);
+            if ($insertedId) {
+                return $this->respondCreated(['message' => 'Order detail created successfully.', 'data' => $model->find($insertedId)]);
             } else {
-                return $this->failServerError('Failed to add order detail.');
+                return $this->failServerError('Failed to create a new order detail.');
             }
         }
     }
@@ -94,12 +126,13 @@ class OrderDetailsController extends ResourceController
         $data = $this->request->getJSON(true);
 
         // Ensure that quantity and subtotal are provided and are valid
-        if (
-            !isset($data['quantity']) || !is_numeric($data['quantity']) ||
-            !isset($data['subtotal']) || !is_numeric($data['subtotal'])
-        ) {
-            return $this->failValidationErrors("Invalid or missing quantity or subtotal.");
-        }
+        // if (
+        //     !isset($data['quantity']) || !is_numeric($data['quantity']) ||
+        //     !isset($data['subtotal']) || !is_numeric($data['subtotal']) ||
+        //     !isset($data['status'])
+        // ) {
+        //     return $this->failValidationErrors("Invalid or missing quantity or subtotal.");
+        // }
 
         // Update the order detail record
         if ($model->update($id, $data)) {
@@ -109,18 +142,27 @@ class OrderDetailsController extends ResourceController
         }
     }
 
-    public function deleteOrderDetail($id)
+    public function deleteOrderDetail($detailId)
     {
         $model = new OrderDetailsModel();
 
-        if (!is_numeric($id)) {
-            return $this->failValidationErrors("Invalid order detail ID provided.");
+        // Check if the detail ID is provided
+        if (!$detailId) {
+            return $this->failValidationErrors('Detail ID is required');
         }
 
-        if ($model->delete($id)) {
+        // Try to find an existing detail entry
+        $existingDetail = $model->find($detailId);
+
+        if (!$existingDetail) {
+            return $this->failNotFound('No detail found with ID: ' . $detailId);
+        }
+
+        // Attempt to delete the detail entry
+        if ($model->delete($detailId)) {
             return $this->respondDeleted(['message' => 'Order detail deleted successfully.']);
         } else {
-            return $this->failServerError('Failed to delete order detail.');
+            return $this->failServerError('Failed to delete the order detail.');
         }
     }
 
@@ -129,7 +171,7 @@ class OrderDetailsController extends ResourceController
         $json = $this->request->getJSON();
         $detailId = $json->detailId;
         $newStatus = $json->newStatus;
-    
+
         // Assuming you have a model named OrderDetailModel
         $model = new OrderDetailsModel();
         if ($model->update($detailId, ['status' => $newStatus])) {
@@ -138,6 +180,33 @@ class OrderDetailsController extends ResourceController
             return $this->response->setJSON(['success' => false, 'message' => 'Failed to update status.']);
         }
     }
-    
-    
+    public function deleteNote()
+    {
+        $model = new OrderDetailsModel();
+        $data = $this->request->getJSON(true);
+
+        // Check if 'order_id' and 'menu_item_id' are provided
+        if (!isset($data['order_id'], $data['menu_item_id'])) {
+            return $this->failValidationErrors('Both order_id and menu_item_id are required.');
+        }
+
+        // Find the existing order detail with the provided IDs
+        $existingDetail = $model->where('order_id', $data['order_id'])
+            ->where('menu_item_id', $data['menu_item_id'])
+            ->first();
+
+        if (!$existingDetail) {
+            return $this->failNotFound('No detail found for the given order_id and menu_item_id');
+        }
+
+        // Set the note to null and update the record
+        $updateStatus = $model->update($existingDetail['id'], ['note' => null]);
+
+        if ($updateStatus) {
+            return $this->respond(['message' => 'Note deleted successfully']);
+        } else {
+            return $this->failServerError('Failed to delete the note.');
+        }
+    }
+
 }

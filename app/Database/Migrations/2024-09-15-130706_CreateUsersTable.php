@@ -52,18 +52,11 @@ class CreateUsersTable extends Migration
             ],
             'role' => [
                 'type' => 'ENUM',
-                'constraint' => ['admin', 'customer', 'staff'],
+                'constraint' => ['admin', 'customer', 'staff', 'kitchen', 'bar', 'waiter', 'accountant', 'cashier'],
                 'default' => 'customer',
             ],
-            'created_at' => [
-                'type' => 'DATETIME',
-                'null' => false,
-                'default' => date('Y-m-d H:i:s'),
-            ],
-            'updated_at' => [
-                'type' => 'DATETIME',
-                'null' => true,
-            ],
+            'created_at datetime default current_timestamp',
+            'updated_at datetime default current_timestamp on update current_timestamp',
         ]);
 
         $this->forge->addKey('id', true);
