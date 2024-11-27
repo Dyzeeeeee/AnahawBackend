@@ -61,6 +61,7 @@ $routes->delete('/delete-order-detail/(:segment)', 'OrderDetailsController::dele
 $routes->post('/update-order-status', 'OrderDetailsController::updateOrderStatus');
 // $routes->delete('/remove-order-detail/(:num)', 'OrderDetailsController::deleteOrderDetail/$1');
 
+$routes->get('/get-most-frequent-menu-item', 'OrderDetailsController::getMostFrequentMenuItem');
 
 
 

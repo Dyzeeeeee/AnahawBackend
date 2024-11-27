@@ -208,5 +208,37 @@ class OrderDetailsController extends ResourceController
             return $this->failServerError('Failed to delete the note.');
         }
     }
+    public function getMostFrequentMenuItem()
+    {
+        $model = new OrderDetailsModel();
+
+        // Query to get the most frequent menu_item_id
+        $result = $model
+            ->select('menu_item_id, COUNT(menu_item_id) as frequency')
+            ->groupBy('menu_item_id')
+            ->orderBy('frequency', 'DESC')
+            ->first();
+
+        // Check if there's a result
+        if ($result) {
+            // Join the `menu` table to get the menu name
+            $menuModel = new \App\Models\MenuModel(); // Assuming you have a MenuModel
+            $menu = $menuModel->find($result['menu_item_id']);
+
+            if ($menu) {
+                return $this->respond([
+                    'menu_item_id' => $result['menu_item_id'],
+                    'menu_name' => $menu['name'],
+                    'menu_image' => $menu['image'],
+                    'menu_description' => $menu['description'],
+                    'frequency' => $result['frequency'],
+                ]);
+            } else {
+                return $this->failNotFound('Menu item not found for the most frequent menu_item_id.');
+            }
+        } else {
+            return $this->respond(['message' => 'No menu items found in the order details.']);
+        }
+    }
 
 }
