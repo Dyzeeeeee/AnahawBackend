@@ -64,6 +64,10 @@ $routes->post('/update-order-status', 'OrderDetailsController::updateOrderStatus
 $routes->get('/get-most-frequent-menu-item', 'OrderDetailsController::getMostFrequentMenuItem');
 
 
+$routes->get('/get-feedbacks', 'FeedbackController::getFeedbacks');
+$routes->post('/send-feedback', 'FeedbackController::addFeedback');
+
+
 
 $routes->post('/add-or-update-online-order-detail', 'OnlineOrderDetailsController::addOrUpdateOnlineOrderDetail');
 $routes->get('/get-online-order-details/(:segment)', 'OnlineOrderDetailsController::getOnlineOrderDetails/$1');
